@@ -1,0 +1,3 @@
+# QUEUED, do not run yet | Stage 1 | Product Review
+
+Prerequisites: Coding Agent completed Stage 1 and UI Agent completed renderer audit. Review exact branch changes and raw test outputs independently. Challenge source SHA mapping, Java 21/JNI feasibility, native-vs-heap memory reasoning, synthetic benchmark controls, addon/save/packet regressions, shader-client comparisons, licensing, and whether a Java-only optimization could outperform a Rust bridge. Return **PASS / CONDITIONAL / FAIL** with concrete evidence, a list of defects, and suggested gate conditions. Do not merge code or touch production. Hand off to PM for decision G1.

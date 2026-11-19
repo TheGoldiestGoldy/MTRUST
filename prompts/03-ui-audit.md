@@ -1,0 +1,3 @@
+# QUEUED, do not run yet | Stage 1 | UI Agent
+
+Prerequisite: read Coding Agent's completed Stage 1 source and class inventory. Audit the exact 4.1.0-beta.2+1.21.1 client renderer, train models, texture and mesh caching, culling, draw-call and upload paths, UI screens, networking and compatibility with installed client graphics mods. Profile representative dense-train synthetic scenes if an isolated client test environment is available; record frame-time percentiles and 1% lows, method and uncertainty. Produce visual-parity and risk matrix. Do not redesign, remove nearby trains, alter asset licenses or touch production. Work on `ui/stage1-audit`, produce a one-page evidence handoff, then send to Product Review.
