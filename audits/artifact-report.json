@@ -1,0 +1,75 @@
+{
+  "artifact_basename": "MTR-fabric-4.1.0-beta.2+1.21.1.jar",
+  "artifact_sha256": "5da075f7d63daea89da17348ace0959a0c216cbaf14a322d063a64bec44aae94",
+  "artifact_bytes": 111620655,
+  "archive_entry_count": 10921,
+  "fabric": {
+    "id": "mtr",
+    "version": "4.1.0-beta.2",
+    "name": "Minecraft Transit Railway",
+    "depends": {
+      "minecraft": "1.21.1",
+      "fabricloader": "*",
+      "fabric-api": "*"
+    },
+    "entrypoints": {
+      "main": [
+        "org.mtr.fabric.MTRFabric"
+      ],
+      "client": [
+        "org.mtr.fabric.MTRFabricClient"
+      ],
+      "modmenu": [
+        "org.mtr.fabric.ModMenuConfig"
+      ]
+    },
+    "mixins": [
+      "mtr.mixins.json"
+    ],
+    "jars": [
+      {
+        "file": "META-INF/jars/elementa-743.jar"
+      },
+      {
+        "file": "META-INF/jars/kotlin-stdlib-2.4.20-Beta1.jar"
+      },
+      {
+        "file": "META-INF/jars/universalcraft-1.21-fabric-497.jar"
+      }
+    ]
+  },
+  "manifest_selected": [
+    "Stonecutter-Node-Project: 1.21.1-fabric",
+    "Stonecutter-Node-Version: 1.21.1",
+    "Fabric-Minecraft-Version: 1.21.1",
+    "Fabric-Mapping-Namespace: intermediary"
+  ],
+  "class_presence": {
+    "org/mtr/core/Main.class": true,
+    "org/mtr/core/simulation/Simulator.class": true,
+    "org/mtr/core/simulation/FileLoader.class": true,
+    "org/mtr/core/servlet/QueueObject.class": true,
+    "org/mtr/core/data/Vehicle.class": true,
+    "org/mtr/core/path/SidingPathFinder.class": true,
+    "org/mtr/render/MainRenderer.class": true,
+    "org/mtr/client/DynamicTextureCache.class": true,
+    "org/mtr/packet/CustomPacketC2S.class": true,
+    "org/mtr/packet/CustomPacketS2C.class": true,
+    "org/mtr/fabric/MTRFabric.class": true,
+    "org/mtr/fabric/MTRFabricClient.class": true
+  },
+  "prefix_entry_counts": {
+    "org/mtr/core/": 302,
+    "org/mtr/packet/": 56,
+    "org/mtr/render/": 60,
+    "org/mtr/client/": 18,
+    "org/mtr/fabric/": 4,
+    "assets/mtr/": 4436,
+    "META-INF/jars/": 4
+  },
+  "limitations": [
+    "Class-file presence is not evidence of source commit correspondence or behavioral parity.",
+    "No heap, native memory, MSPT, client FPS, or licensing status is measured here.",
+    "Source tag and embedded TSC binary provenance require separate verification."
+  ]
+}
