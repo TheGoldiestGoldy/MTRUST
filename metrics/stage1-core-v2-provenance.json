@@ -1,0 +1,22 @@
+{
+  "schema": "goldrail-stage1-core-v2-provenance-v1",
+  "recorded_utc": "2026-11-19T23:00:53.372913+00:00",
+  "workspace_base_before_uncommitted_harness": "a404975b50885194165c8c980fdb21571ae961e6",
+  "note": "V2 execution happened on uncommitted evidence-repair working tree after branching from this PM base; base commit in CSV/JSON is not the harness commit. Content hashes here pin the executed script sources and raw/CSV results; final branch commit in handoff. No reanalysis overwrote original V1 metrics. After the measured run, a single trailing ASCII space was removed from the Python harness to pass git diff --check; the executed script SHA256 is recorded separately. No code tokens, branches, benchmarks or timing raw data changed.",
+  "sha256": {
+    "scripts/CoreEvidenceBenchmark.java": "c71683afdd195ad39f5c80432a2182148580cf5dbd416052e35c41b8cd454cd5",
+    "scripts/benchmark_tsc_v2.py": "0e9017b598171ec3482fbce6032193095489e958513bd25ff5c060181bd60b07",
+    "scripts/benchmark_tsc.py": "b44168be72084d2d9de7bb82754eace418363ceff769bfd01bbd5b972c06a69e",
+    "scripts/CoreSyntheticBenchmark.java": "773130bd7c0500628996b15d69ff634059c37331cc985a3e8d4435adb13676b0",
+    "metrics/stage1-core-v2.csv": "c3dca2cd3c4b40260f3e5576fdf3118ab69a175a1679bbafc45bf56fda93a372",
+    "metrics/stage1-core-v2-raw.json": "a5750d8aa90f899bf519698698730d0dbcaab320a9d951de57e8198c00eeab16",
+    "metrics/baseline.csv": "4aa0d37568ba144be893e684a4299c29c99e194214ba6444d16cf0fcff5e6704",
+    "metrics/stage1-raw.json": "4e5fd6cd13989b657cb0c239f10fe407ac4331b9f7498f8b001c312e30bf1e75",
+    "official_release_artifact_sha256": "5da075f7d63daea89da17348ace0959a0c216cbaf14a322d063a64bec44aae94"
+  },
+  "executed_python_source_sha256_before_whitespace_cleanup": "3435dd7a186a2468e2b756e7cda5966c3ab225302c2a019637ad98f76f846369",
+  "public_snapshot": {
+    "raw_v2_phase_trace_included": false,
+    "reason": "The large phase-level process trace is withheld from the public snapshot; its SHA-256 remains recorded above. Summary CSV and source hashes are published."
+  }
+}

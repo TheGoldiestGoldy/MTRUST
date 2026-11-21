@@ -1,0 +1,3 @@
+profile,scene,train_count,players,game_version,fabric_loader,tick_query_samples,p50_ms,p95_ms,p99_ms,rss_kb_snapshot,pss_kb_snapshot,replicates,status,notes
+original_mtr,empty_generated_flat_world,0,0,1.21.1,0.18.4,100,0.2,0.3,0.8,899124,891380,1,OBSERVED_EXPLORATORY,Unmatched startup/GC and memory phases; cannot infer MTR impact
+fabric_only,empty_generated_flat_world,0,0,1.21.1,0.18.4,100,0.1,0.1,2.9,985268,977133,1,OBSERVED_EXPLORATORY,Unmatched startup/GC and memory phases; cannot infer MTR impact

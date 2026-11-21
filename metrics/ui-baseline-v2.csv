@@ -1,0 +1,5 @@
+scenario,client_launch,train_count,shader,camera,whole_frame_median_ms,whole_frame_p95_ms,whole_frame_p99_ms,one_percent_low_fps,source,notes
+S0,NOT MEASURED,NOT MEASURED,NOT MEASURED,NOT MEASURED,NOT MEASURED,NOT MEASURED,NOT MEASURED,NOT MEASURED,none,No licensed separate-client gameplay or valid frame capture
+S1,NOT MEASURED,NOT MEASURED,NOT MEASURED,NOT MEASURED,NOT MEASURED,NOT MEASURED,NOT MEASURED,NOT MEASURED,none,No licensed separate-client gameplay or valid frame capture
+S2,NOT MEASURED,NOT MEASURED,NOT MEASURED,NOT MEASURED,NOT MEASURED,NOT MEASURED,NOT MEASURED,NOT MEASURED,none,No licensed separate-client gameplay or valid frame capture
+S3,NOT MEASURED,NOT MEASURED,NOT MEASURED,NOT MEASURED,NOT MEASURED,NOT MEASURED,NOT MEASURED,NOT MEASURED,none,No licensed separate-client gameplay or valid frame capture

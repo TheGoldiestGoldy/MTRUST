@@ -1,0 +1,69 @@
+{
+  "schema": "goldrail-released-bytecode-oracle-v1",
+  "timestamp_utc": "2026-11-19T22:55:33.772046+00:00",
+  "released_artifact_sha256": "5da075f7d63daea89da17348ace0959a0c216cbaf14a322d063a64bec44aae94",
+  "jdk_javap_version": "21.0.13.1",
+  "source_provenance": "UNRESOLVED",
+  "behavioral_oracle": "published JAR bytecode, not candidate source checkout",
+  "scopes": {
+    "verified": "exact 9 class bytes and javap -p -c disassemblies",
+    "partially_verified": "synthetic private tick() clock and rail-count reload in core-v2",
+    "not_verified": "binary/source equivalence, routes, actual moving trains, packet wire, save bytes, Fabric behavior"
+  },
+  "classes": {
+    "org.mtr.core.data.Position": {
+      "entry": "org/mtr/core/data/Position.class",
+      "class_sha256": "47d87fc7cab940b2b40b2c1c4e36310468adc5633289e3a134cced283b7a06e3",
+      "class_bytes": 3621,
+      "javap21_disassembly_sha256": "3665e2c6ff6b4b0d13fcece55b417bf8d44f1db77db69bbc80b4d4fdfbf053a5"
+    },
+    "org.mtr.core.data.Rail": {
+      "entry": "org/mtr/core/data/Rail.class",
+      "class_sha256": "15bddeba75a91df8fcc83508787d7dac188a579cd1ca605452b63b9bc6db811a",
+      "class_bytes": 35620,
+      "javap21_disassembly_sha256": "3e3477f809417a4f6d572480a6d182f585e782cba5e4278ebf2e6e7d9c5211bd"
+    },
+    "org.mtr.core.data.Siding": {
+      "entry": "org/mtr/core/data/Siding.class",
+      "class_sha256": "8b0208c7d6f5c1312590f680d6b81a4a6c2f111c8f3d635b62861345b8708e42",
+      "class_bytes": 54742,
+      "javap21_disassembly_sha256": "1c0f617ddae4792d12907da5229bd6ea6c8d05371e8bef252aef24312d8b0fe8"
+    },
+    "org.mtr.core.data.Depot": {
+      "entry": "org/mtr/core/data/Depot.class",
+      "class_sha256": "8dad602c4bdb82f2800f573ad867c3f59c22015d224fee5010016f7795b8690f",
+      "class_bytes": 24207,
+      "javap21_disassembly_sha256": "8e201c4d9e4c7a19c7d338de04d3dbcd1bbc48ca93a48f3fcea34dd66a80eb00"
+    },
+    "org.mtr.core.data.Route": {
+      "entry": "org/mtr/core/data/Route.class",
+      "class_sha256": "4a1808544c5a3514bbd2e32dba79dd9f9e4a8253034207d03b3f4e13d7838e87",
+      "class_bytes": 6831,
+      "javap21_disassembly_sha256": "631a73ea83f220b1214271765b5271ae80cf5afb3caf35128797b7d66333b29d"
+    },
+    "org.mtr.core.data.Vehicle": {
+      "entry": "org/mtr/core/data/Vehicle.class",
+      "class_sha256": "67f584c5dba1cc13b3a72664782a0758ce863f27d304a61db0c06afd9f3b5e12",
+      "class_bytes": 33573,
+      "javap21_disassembly_sha256": "c2a2512c9256a6c8eb67a9dbd6046e8fa4721881206daa037ac2fcce8644fb31"
+    },
+    "org.mtr.core.simulation.Simulator": {
+      "entry": "org/mtr/core/simulation/Simulator.class",
+      "class_sha256": "6625227a3212283cc3613008caeec3bdddaa35b7f2daf2b9523e5f64cacfa3cf",
+      "class_bytes": 28861,
+      "javap21_disassembly_sha256": "67eb86769acc550e1c400c8f2db53cd993c4bbd18a3ed8e2c20b3ee81436080f"
+    },
+    "org.mtr.core.simulation.FileLoader": {
+      "entry": "org/mtr/core/simulation/FileLoader.class",
+      "class_sha256": "fb4d1427a309d079c51243932bbad7e124b6208ef9c3a265930e73af9f32e801",
+      "class_bytes": 19689,
+      "javap21_disassembly_sha256": "2f9647ec8eb225612e00c4bacce59bc96d56d26930a9b45cc96df7ddd898e8e8"
+    },
+    "org.mtr.core.servlet.OperationProcessor": {
+      "entry": "org/mtr/core/servlet/OperationProcessor.class",
+      "class_sha256": "1a10d816c9c143c5cbb38c1236af9b5738c914c35566d51224b07c656a9dc717",
+      "class_bytes": 5607,
+      "javap21_disassembly_sha256": "818ec7ee5b6e476f30473107ae75d9cda2a629889c26f127cd62546b71a4cc45"
+    }
+  }
+}

@@ -1,44 +1,33 @@
-# MTRUST (GoldRail)
+# GoldRail
 
-A performance-focused, compatible replacement for Minecraft Transit Railway 4.1.0-beta.2 on Minecraft 1.21.1 / Fabric / Java 21, with a **Rust native simulation engine only where measurements justify one**.
+A proposed compatible replacement for Minecraft Transit Railway 4.1.0-beta.2 on Minecraft 1.21.1 / Fabric / Java 21, with an optional Rust simulation engine only if controlled measurements justify it.
 
-## Project state
+## Verified project state - 2026-11-21
 
-**Stage 1: source, compatibility and performance audit.** No Rust rewrite is approved yet. No benchmark improvement has been measured. This public repository contains sanitized planning documents and development tools. **There is no functional Rust replacement, release JAR or measured performance improvement yet.**
+- Stage 1 binary, architecture, compatibility and performance audits are complete as research handoffs.
+- The Coding Agent repaired the standalone Java-core measurement harness. These are synthetic internal TSC measurements, not Minecraft server MSPT.
+- The isolated A0 reference lab booted original-MTR and no-MTR Fabric servers and initialized a separate PollyMC client. No moving-train gameplay or valid client frame capture has been demonstrated.
+- Independent Product Review rejected G1. **G1 remains CLOSED.**
+- No Rust/JNI engine, GoldRail replacement Fabric JAR, playable A2 alpha, or measured Rust-vs-Java improvement exists.
+- The local full Python suite passed 39/39 tests on 2026-11-21. This validates helper and safety tests, not gameplay or compatibility.
 
-The existing MTR v4 JAR contains the Java Transport Simulation Core. Fabric/JVM classes must remain for mod registration, networking, renderer and addon compatibility. The intended Rust component is a versioned, bounded JNI implementation after source parity and a baseline are established.
+## Non-negotiable boundaries
 
-## Hard safety boundaries
+- Never modify a production server, world, installed mod, ordinary launcher profile, or unrelated server-operations repository.
+- Use newly generated isolated test data only. Never publish private seeds, account data, local paths, machine addresses, logs, or world files.
+- Do not infer train performance from static rail-count microbenchmarks or empty-world server queries.
+- Keep Java heap, native memory, process RSS/PSS, server MSPT and client frame times separate.
+- No merge, release, migration or deployment without independent Product Review and explicit PM approval.
 
-- Never mutate the running server, production worlds, installed production JARs or public `goldcraft-server-ops`.
-- Only use synthetic isolated test worlds for replay/benchmarks.
-- Never publish tokens, IP addresses, raw world data, seeds, private files, personal usernames or identifying paths.
-- No world migration or production mod switch without review.
-- Work on isolated branches and PRs; PM and Product Review jointly gate merges/releases.
+## Read first
 
-## Read before working
+1. AGENTS.md
+2. docs/ARCHITECTURE.md
+3. docs/ROADMAP.md and docs/ROAD_TO_FINISH.md
+4. docs/BENCHMARKS.md
+5. docs/HANDOFFS.md
+6. docs/COMPATIBILITY.md
+7. docs/RELEASE_SAFETY.md
+8. The exact assigned prompt in prompts/
 
-1. `AGENTS.md`
-2. `docs/ARCHITECTURE.md`
-3. `docs/ROADMAP.md`
-4. `docs/BENCHMARKS.md`
-5. `docs/HANDOFFS.md`
-6. `docs/COMPATIBILITY.md`
-7. `docs/RELEASE_SAFETY.md`
-8. Assigned role prompt in `prompts/`
-
-The PM dispatches **Coding Stage 1 first**, then UI audit, then independent Product Review. The in-progress Coding audit is kept in a separate branch until reviewed. See `docs/DISPATCH.md`.
-
-## Ground truths
-
-- Target Java: 21; Linux x86_64; Fabric 1.21.1.
-- Target upstream mod: MTR 4.1.0-beta.2; exact source tag/commit must be pinned to the installed JAR.
-- Rust is not itself a Fabric mod. Final delivery, if justified, is a Fabric/Java JAR with optional native engine.
-- Server RAM and client FPS are distinct outcomes. Both need baselines.
-- Installed assets and third-party libraries must retain their own license obligations.
-
-## Current owners
-
-PM: project scope, dependencies, merge gates. Coding: exact-source audit and later engine work. UI: client rendering audit and parity. Product Review: independent evidence and regression check.
-
-Status: **AUDIT STARTED; no replacement, no stage gate approved.**
+The current authorized planning scope is W0 evidence completion only. See docs/START_HERE.md. W1 Rust/JNI work is blocked until independent review and an explicit PM G1 decision.

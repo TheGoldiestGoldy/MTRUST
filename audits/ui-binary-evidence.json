@@ -1,0 +1,157 @@
+{
+  "release_sha256": "5da075f7d63daea89da17348ace0959a0c216cbaf14a322d063a64bec44aae94",
+  "method": "JDK 21 javap -c -p on the exact distributed JAR; no client executed",
+  "interpretation": "STATIC BYTECODE COUNTS ONLY. Not draw calls per frame, GPU operations, CPU time, FPS or proven source provenance.",
+  "class_inventory": {
+    "org.mtr.render.MainRenderer": {
+      "bytecode_instruction_lines": 667,
+      "method_declarations_approx": 33
+    },
+    "org.mtr.render.RenderVehicles": {
+      "bytecode_instruction_lines": 2221,
+      "method_declarations_approx": 32
+    },
+    "org.mtr.render.RenderRails": {
+      "bytecode_instruction_lines": 1932,
+      "method_declarations_approx": 32
+    },
+    "org.mtr.render.RenderLifts": {
+      "bytecode_instruction_lines": 852,
+      "method_declarations_approx": 21
+    },
+    "org.mtr.render.WorkerThread": {
+      "bytecode_instruction_lines": 296,
+      "method_declarations_approx": 15
+    },
+    "org.mtr.client.DynamicTextureCache": {
+      "bytecode_instruction_lines": 1301,
+      "method_declarations_approx": 40
+    },
+    "org.mtr.model.ModelLoaderBase": {
+      "bytecode_instruction_lines": 230,
+      "method_declarations_approx": 16
+    },
+    "org.mtr.model.NewOptimizedModel": {
+      "bytecode_instruction_lines": 212,
+      "method_declarations_approx": 5
+    },
+    "org.mtr.model.NewOptimizedModelGroup": {
+      "bytecode_instruction_lines": 283,
+      "method_declarations_approx": 16
+    },
+    "org.mtr.model.ObjModelLoader": {
+      "bytecode_instruction_lines": 500,
+      "method_declarations_approx": 13
+    },
+    "org.mtr.model.BlockbenchModelLoader": {
+      "bytecode_instruction_lines": 188,
+      "method_declarations_approx": 12
+    },
+    "org.mtr.model.BuiltVehicleModelHolder": {
+      "bytecode_instruction_lines": 1360,
+      "method_declarations_approx": 15
+    },
+    "org.mtr.resource.VehicleResource": {
+      "bytecode_instruction_lines": 814,
+      "method_declarations_approx": 43
+    },
+    "org.mtr.client.CustomResourceLoader": {
+      "bytecode_instruction_lines": 843,
+      "method_declarations_approx": 44
+    },
+    "org.mtr.render.MoreRenderLayers": {
+      "bytecode_instruction_lines": 141,
+      "method_declarations_approx": 15
+    }
+  },
+  "structural_checks": {
+    "main_calls_vehicles": {
+      "present": true,
+      "class": "org.mtr.render.MainRenderer",
+      "searched_text": "Method org/mtr/render/RenderVehicles.render:"
+    },
+    "main_calls_rails": {
+      "present": true,
+      "class": "org.mtr.render.MainRenderer",
+      "searched_text": "Method org/mtr/render/RenderRails.render:"
+    },
+    "main_calls_passengers": {
+      "present": true,
+      "class": "org.mtr.render.MainRenderer",
+      "searched_text": "Method org/mtr/render/RenderPassengers.render:"
+    },
+    "main_ticks_texture_cache": {
+      "present": true,
+      "class": "org.mtr.render.MainRenderer",
+      "searched_text": "Method org/mtr/client/DynamicTextureCache.tick:"
+    },
+    "vehicles_distance_check": {
+      "present": true,
+      "class": "org.mtr.render.RenderVehicles",
+      "searched_text": "Method org/mtr/tool/CullingHelper.getDistanceFromCamera:"
+    },
+    "vehicles_new_random": {
+      "present": true,
+      "class": "org.mtr.render.RenderVehicles",
+      "searched_text": "Method java/util/Random.\"<init>\":"
+    },
+    "vehicles_new_remote_player": {
+      "present": true,
+      "class": "org.mtr.render.RenderVehicles",
+      "searched_text": "class net/minecraft/class_745"
+    },
+    "rails_box_distance_check": {
+      "present": true,
+      "class": "org.mtr.render.RenderRails",
+      "searched_text": "Method org/mtr/tool/CullingHelper.getDistanceFromCameraToBox:"
+    },
+    "lifts_request_occlusion": {
+      "present": true,
+      "class": "org.mtr.render.RenderLifts",
+      "searched_text": "Method org/mtr/render/WorkerThread.scheduleLifts:"
+    },
+    "worker_has_vehicle_occlusion_api": {
+      "present": true,
+      "class": "org.mtr.render.WorkerThread",
+      "searched_text": "scheduleVehicles("
+    },
+    "worker_has_texture_queue_api": {
+      "present": true,
+      "class": "org.mtr.render.WorkerThread",
+      "searched_text": "scheduleDynamicTextures("
+    },
+    "texture_dispatches_worker": {
+      "present": true,
+      "class": "org.mtr.client.DynamicTextureCache",
+      "searched_text": "Method org/mtr/render/WorkerThread.scheduleDynamicTextures:"
+    },
+    "texture_creates_dynamic_texture": {
+      "present": true,
+      "class": "org.mtr.client.DynamicTextureCache",
+      "searched_text": "class net/minecraft/class_1043"
+    },
+    "models_have_vertex_buffer_upload": {
+      "present": true,
+      "class": "org.mtr.model.NewOptimizedModel",
+      "searched_text": "Method net/minecraft/class_291.method_1352:"
+    },
+    "models_have_vertex_buffer_draw": {
+      "present": true,
+      "class": "org.mtr.model.NewOptimizedModel",
+      "searched_text": "Method net/minecraft/class_291.method_35665:"
+    },
+    "obj_parser_async": {
+      "present": true,
+      "class": "org.mtr.model.ObjModelLoader",
+      "searched_text": "java/util/concurrent/ExecutorService.submit:"
+    }
+  },
+  "static_reference_counts": {
+    "vehicles_distance_helper_references": 2,
+    "vehicles_frustum_token_references": 0,
+    "vehicles_random_constructor_references": 1,
+    "model_vertex_draw_method_references": 1,
+    "model_vertex_upload_method_references": 1,
+    "worker_vehicle_culling_call_references_in_renderer": 0
+  }
+}

@@ -26,3 +26,10 @@ ops.json
 *.pem
 *.key
 **/.DS_Store
+
+# Local read-only upstream checkout and generated synthetic data
+.audit-cache/
+
+# Python build/test debris
+__pycache__/
+*.pyc
