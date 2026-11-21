@@ -1,0 +1,6 @@
+scenario,shaders,train_count,model_id,frame_samples,frame_ms_median,frame_ms_p95,frame_ms_p99,one_percent_low_fps,cpu_pct_median,gpu_pct_median,rss_bytes_median,vram_bytes_median,capture_duration_s,capture_method,status,reason
+S0_no_visible_trains,off,,,,,,,,,,,,,,NOT MEASURED,No isolated synthetic Fabric client scene or frame capture
+S1_one_train,off,,,,,,,,,,,,,,NOT MEASURED,No isolated synthetic train fixture or frame capture
+S2_several_moving_trains,off,,,,,,,,,,,,,,NOT MEASURED,No isolated synthetic train fixture or frame capture
+S3_dense_trains,off,,,,,,,,,,,,,,NOT MEASURED,No isolated synthetic train fixture or frame capture
+S3_dense_trains,on,,,,,,,,,,,,,,NOT MEASURED,No isolated synthetic train fixture or frame capture

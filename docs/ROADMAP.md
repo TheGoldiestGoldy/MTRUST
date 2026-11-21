@@ -1,6 +1,6 @@
 # Roadmap and mandatory gates
 
-All work is sequential, not three agents running at once. Each stage runs Coding -> UI -> Product Review -> PM gate. No automatic merge.
+**Gates remain sequential (G1 through G5)**. After the 2026-11-20 PM concurrency revision, independent coding, UI and provenance tasks **within** an approved wave may run in parallel in different Git worktrees. A single integrator assembles completed work, an independent Product Reviewer challenges it, and PM alone decides the next gate. See docs/ROAD_TO_FINISH.md and docs/PARALLEL_AGENT_PROTOCOL.md. No automatic merge.
 
 | Stage | Coding goal | UI goal | Product Review gate |
 |---|---|---|---|
@@ -20,4 +20,8 @@ Target is MTR 4.1.0-beta.2+1.21.1, not upstream master. Keep exact artifact SHA-
 
 ## Dispatch
 
-Read `docs/DISPATCH.md`. Start only `prompts/01-coding-audit.md`. UI waits for the Coding file/class map; Product Review waits for both audits.
+For the current work, use docs/ROAD_TO_FINISH.md and docs/PARALLEL_AGENT_PROTOCOL.md plus prompts/10-reference-fixture.md, 11-client-baseline.md and 12-provenance-oracles.md. The Stage 1 original audit prompts are preserved as historical dispatch. **G1 is closed** and the W1 Rust implementation cannot start until independent review and PM approve it.
+
+## First runnable alpha milestones
+
+See `docs/ALPHA_READINESS.md` for acceptance tests and the distinction between original-MTR reference sandbox (A0), Rust JNI developer preview (A1), first *playable GoldRail* test-only alpha (A2, target after Stage 3), and independently measured optimized alpha (A3, Stage 4). Existing G1-G5 review gates and production restrictions remain in force; there is no silent waiver for an earlier demo.

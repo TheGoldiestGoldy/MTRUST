@@ -1,7 +1,23 @@
 # GoldRail agent contract
 
-You are an agent in the GoldRail project, managed by the Project Manager chat. Target Minecraft 1.21.1 Fabric, Linux x86_64 server and Java 21. Preserve MTR 4.1.0-beta.2 world data and gameplay where validated. Never modify the live server or public server-ops repository. Source of truth is the GoldRail/MTRUST Git repository, not chat memory. Only sanitized docs, original code and synthetic test fixtures may be published; never publish server or personal data. Before work read README.md, AGENTS.md, docs/ARCHITECTURE.md, docs/ROADMAP.md, docs/HANDOFFS.md, docs/BENCHMARKS.md. The role prompt assigns you exactly one owned task. If no code/workspace is accessible, give reproducible instructions and an explicit blocker; never claim changes/tests occurred. Every handoff lists commit/branch, files changed, reproduction steps, tests with outputs, quantitative evidence or "not measured", known risks, next role. All work is on isolated branches and requires PR before merge. Respect MIT and third-party licenses. Never disclose IPs, usernames, filesystem paths tied to a person, auth tokens, private world seeds or raw world files in public output. No cosmetic redesign without parity and performance reasons. No merge or release without Product Review and PM approval.
+Target: Minecraft 1.21.1, Fabric, Java 21, Linux x86_64. Preserve validated MTR 4.1.0-beta.2 behavior and existing data. GoldRail is a Fabric/Java mod; Rust is optional and not a standalone Fabric mod.
 
-## Task ownership
+The public project repository is MTRUST. The local development history and public GitHub history may not share a Git root or tracking remote. **Inspect the current branch, exact base SHA, worktree status and remote refs before any change. Never assume local refs are already published.** The current PM planning base is pm/parallel-road-to-finish at 18f4c2838577a1ff701ae870b59b5a339d21ee18.
 
-Coding: `cod/*` only. UI: `ui/*` only. Product Review: `review/*` where needed. PM: roadmap and dispatch. Read the latest `docs/HANDOFFS.md` entry and actual git changes, not chat summaries. Never claim a command was run without its output. Do not access production world data for tests.
+## Rules
+
+- Work only on the role-owned branch prefix and files. Use a separate Git worktree for each concurrent agent.
+- Never commit directly to main, force-push, overwrite another agent's branch, or merge without explicit PM authorization.
+- The role prompt defines the only authorized task. G1-G5 are sequential stop gates.
+- Current authorization is W0 reference evidence only. G1 is rejected/closed. No Rust/JNI implementation or playable replacement is authorized.
+- Do not access or modify production worlds, servers, installed mods, account data, ordinary launcher profiles, or private saves.
+- Use only newly generated synthetic fixtures. Keep seeds and all generated worlds in ignored local scratch; never commit them.
+- Do not publish machine addresses, private paths, credentials, user identifiers, logs, world data, seeds, or third-party binaries/assets.
+- Record exact branch/SHA, files, commands, exit codes, measured values or NOT MEASURED, compatibility limits, risks and next owner.
+- Never claim a test, build, benchmark, launch or review occurred without its actual output.
+- Respect upstream and third-party licenses. No project license has been selected; do not assume reuse rights.
+- Stop after the assigned handoff. Integrator, Product Review and PM have separate ownership.
+
+## Ownership
+
+Coding: cod/* only. UI: ui/* only. Product Review: review/* only. Integrator: integrate/* only. PM owns roadmap, shared contracts and dispatch. Shared documents are changed only through PM/integrator review.
